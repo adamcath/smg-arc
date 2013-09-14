@@ -112,7 +112,7 @@
         padding: 7px 0px 14px 0px;
     }
 
-    .main-photo
+    #main-photo
     {
         width: 100%;
         min-width: 448px;
@@ -163,7 +163,7 @@
 </div>
 <div class="photo-box-outer">
     <div class="photo-box-inner">
-        <img class="main-photo" src="point-reyes.jpg"/>
+        <img id="main-photo"/>
     </div>
 </div>
 
@@ -172,38 +172,57 @@
 
     (function() {
 
+        var AdaptiveImageController = {
+
+            computeImageURL: function(windowWidth) {
+                if (windowWidth <= 657)
+                    return "point-reyes-quarter.jpg";
+                else if (windowWidth <= 1315)
+                    return "point-reyes-half.jpg";
+                else
+                    return "point-reyes-full.jpg";
+            },
+
+            update: function() {
+                $("#main-photo").attr("src", AdaptiveImageController.computeImageURL($(window).width()));
+            }
+        };
+
+        $(window).resize(AdaptiveImageController.update);
+        AdaptiveImageController.update();
+
         var Animator = {
 
             animationHandle: null,
 
             startAnimation: function(callback) {
-                this.animationHandle = setInterval(callback, 30);
+                Animator.animationHandle = setInterval(callback, 30);
             },
 
             stopAnimation: function() {
-                clearInterval(this.animationHandle);
-                this.animationHandle = null;
+                clearInterval(Animator.animationHandle);
+                Animator.animationHandle = null;
             },
 
             enableAnimation: function(shouldEnable, callback) {
-                if (shouldEnable == this.isAnimationEnabled())
+                if (shouldEnable == Animator.isAnimationEnabled())
                     return;
 
-                shouldEnable ? this.startAnimation(callback) : this.stopAnimation();
+                shouldEnable ? Animator.startAnimation(callback) : Animator.stopAnimation();
             },
 
             isAnimationEnabled: function() {
-                return this.animationHandle != null;
+                return Animator.animationHandle != null;
             }
         };
 
         var SunbeamController = {
 
             doFrame: function() {
-                $(".sunbeams").css("right", this.getSunbeamPosition($(window).width()));
-                $(".sunbeams-overlay").css("right", this.getSunbeamOverlayPosition($(window).width()));
+                $(".sunbeams").css("right", SunbeamController.getSunbeamPosition($(window).width()));
+                $(".sunbeams-overlay").css("right", SunbeamController.getSunbeamOverlayPosition($(window).width()));
 
-                Animator.enableAnimation($(window).width() > 900, animate);
+                Animator.enableAnimation($(window).width() > 900, SunbeamController.doFrame);
             },
 
             getSunbeamPosition: function(windowWidth) {
@@ -213,7 +232,7 @@
             getSunbeamOverlayPosition: function(windowWidth) {
                 return -100 + ((windowWidth - 900) * 0.2) + (Math.cos((new Date().getTime()/25000 * 2 * Math.PI) * 0.9) * 40);
             }
-        }
+        };
 
         $(window).resize(SunbeamController.doFrame);
         SunbeamController.doFrame();
