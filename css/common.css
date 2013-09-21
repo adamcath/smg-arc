@@ -92,4 +92,9 @@ body
         height: 40px;
         padding: 12pt;
     }
+
+    .main-copy
+    {
+        padding: 32pt 12pt 12pt 12pt;
+    }
 }
