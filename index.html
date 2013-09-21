@@ -150,12 +150,12 @@
 <div class="top-banner">
     <span class="title">Stephanie and Adam</span>
     <div class="sun">
-        <img src="sun.png"/>
+        <img src="images/sun.png"/>
     </div>
 </div>
 <div class="main-copy">
-    <img class="sunbeams" src="sunbeans.png"/>
-    <img class="sunbeams-overlay" src="sunbeans-2.png"/>
+    <img class="sunbeams" src="images/sunbeans.png"/>
+    <img class="sunbeams-overlay" src="images/sunbeans-2.png"/>
     <p>
         June 14, 2014<br/>
         Point Reyes Seashore Lodge, California
@@ -168,7 +168,7 @@
     </div>
 </div>
 
-<script src="jquery-1.10.2.min.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
 <script>
 
     (function() {
@@ -177,11 +177,11 @@
 
             computeImageURL: function(windowWidth) {
                 if (windowWidth <= 657)
-                    return "point-reyes-quarter.jpg";
+                    return "images/point-reyes-quarter.jpg";
                 else if (windowWidth <= 1315)
-                    return "point-reyes-half.jpg";
+                    return "images/point-reyes-half.jpg";
                 else
-                    return "point-reyes-full.jpg";
+                    return "images/point-reyes-full.jpg";
             },
 
             update: function() {
