@@ -63,14 +63,13 @@ body
 }
 
 .navbox {
-    right: 90px;
-    bottom: -10pt;
-    position: absolute;
+    width: 100%;
+    text-align: center;
 }
 
 .navbox iframe {
-    width: 400pt;
-    height: 32pt;
+    width: 240px;
+    height: 200px;
     border: 0;
 }
 
@@ -85,9 +84,5 @@ body
     .main-copy
     {
         padding: 32pt 12pt 12pt 12pt;
-    }
-
-    .navbox {
-        right: 12pt;
     }
 }
