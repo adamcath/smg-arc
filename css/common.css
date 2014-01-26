@@ -12,7 +12,7 @@ body
 {
     margin: 0;
     padding: 0;
-    background-color: #303030;
+    background-color: #98967B;
 }
 
 .top-banner
@@ -65,12 +65,49 @@ body
 .navbox {
     width: 100%;
     text-align: center;
+    background-color: #303030;
 }
 
 .navbox iframe {
     width: 240px;
     height: 200px;
     border: 0;
+}
+
+section
+{
+    background-color: #F8F8E5;
+
+    font-family: BrookeShappell8;
+    font-size: 20pt;
+    color: #074F5F;
+
+    padding: 20pt 90px 20pt 90px;
+    margin: 36pt 0 48pt 0;
+
+    border: 0 solid #EB5D26;
+    border-top-width: 3px;
+    border-bottom-width: 7px;
+}
+
+header
+{
+    color: #F8F8E5;
+    font-family: RabbitOnTheMoon;
+    font-size: 30pt;
+    text-shadow: 2px 2px #EB5D26;
+    letter-spacing: -3px;
+
+    position: relative;
+    top: -22pt;
+    line-height: 0pt;
+}
+
+.caption
+{
+    margin-top: 6pt;
+    margin-bottom: 3pt;
+    font-size: 14pt;
 }
 
 @media (max-width: 981px)
@@ -84,5 +121,11 @@ body
     .main-copy
     {
         padding: 32pt 12pt 12pt 12pt;
+    }
+
+    section
+    {
+        padding: 20pt 12pt 20pt 12pt;
+        margin: 36pt 0 36pt 0;
     }
 }
