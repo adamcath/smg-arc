@@ -88,14 +88,29 @@ a.back:visited
 
 .navbox {
     width: 100%;
+    height: 150px;
+    padding: 6pt;
     text-align: center;
     background-color: #303030;
 }
 
-.navbox iframe {
-    width: 100%;
-    height: 100px;
-    border: 0;
+#nav
+{
+    line-height: 190%;
+    text-align: center;
+}
+
+#nav a
+{
+    font-family: BrookeShappell8;
+    font-weight: 300;
+    color: #EB5D26;
+    font-size: 18pt;
+    text-decoration: none;
+    padding: 2pt 9pt 1pt 9pt;
+    border: 1px solid #EB5D26;
+    border-radius: 2pt;
+    background-color: rgba(235, 93, 38, 0.1);
 }
 
 section
