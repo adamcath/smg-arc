@@ -9,7 +9,9 @@
         body
         {
             margin-left: 0;
+            margin-right: 0;
             padding: 0;
+            line-height: 190%;
         }
 
         a
@@ -33,12 +35,10 @@
 
         a
         {
-            margin: 0px;
             padding: 1pt 9pt;
             border: 1px solid #EB5D26;
             border-radius: 2pt;
             background-color: rgba(235, 93, 38, 0.1);
-
         }
 
     </style>
@@ -51,10 +51,8 @@
         }
 
         var mode = getQueryParam("mode");
-
         if (mode)
         {
-
             $(document).ready(function() {
                 $("#linkContainer").addClass("dominant");
             });
@@ -66,10 +64,12 @@
 <body>
 
     <div id="linkContainer">
+        <nobr>
             <a href="index.html">Home</a>
             <a href="travel-info.html">Travel</a>
             <a href="story.html">Us</a>
             <a href="registry.html">Registry</a>
+        </nobr>
     </div>
 
 </body>
