@@ -1,15 +1,14 @@
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=yes" />
     <title>Stephanie and Adam's Wedding</title>
     <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/fonts.css"/>
     <style>
 
-        .sun
+        body
         {
-            position: absolute;
-            bottom: -15px;
-            right: 90px;
+            background-color: #303030;
         }
 
         .sunbeams
@@ -17,6 +16,7 @@
             position: absolute;
             right: -20px;
             top: 50px;
+            pointer-events: none; /* prevent image from eating mouse events */
         }
 
         .sunbeams-overlay
@@ -24,6 +24,7 @@
             position: absolute;
             right: -20px;
             top: 50px;
+            pointer-events: none; /* prevent image from eating mouse events */
         }
 
         .photo-box-outer
@@ -49,14 +50,14 @@
 
         @media (max-width: 981px)
         {
-            .sun
+            .sunbeams
             {
                 display: none;
             }
 
-            .sunbeams
+            .sunbeams-overlay
             {
-                opacity: 0.5;
+                display: none;
             }
         }
     </style>
@@ -69,6 +70,7 @@
         <img src="images/sun.png"/>
     </div>
 </div>
+
 <div class="main-copy">
     <img class="sunbeams" src="images/sunbeans.png"/>
     <img class="sunbeams-overlay" src="images/sunbeans-2.png"/>
@@ -76,8 +78,18 @@
         June 14, 2014<br/>
         Point Reyes Seashore Lodge, California
     </p>
-    <p class="small-copy">Please check back in a little bit for more deets!</p>
+    <p>
+        <div id="nav" style="text-align: left">
+            <nobr>
+                <a href="index.html">Home</a>
+                <a href="travel-info.html">Travel</a>
+                <a href="story.html">Us</a>
+                <a href="registry.html">Registry</a>
+            </nobr>
+        </div>
+    </p>
 </div>
+
 <div class="photo-box-outer">
     <div class="photo-box-inner">
         <img id="main-photo"/>
