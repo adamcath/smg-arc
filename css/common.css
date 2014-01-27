@@ -13,6 +13,8 @@ body
     margin: 0;
     padding: 0;
     background-color: #98967B;
+    font-family: Gudea;
+    font-size: 12pt;
 }
 
 .top-banner
@@ -71,10 +73,7 @@ a.back:visited
 
     background-color: #F8F8E5;
 
-    font-family: BrookeShappell8;
     color: #074F5F;
-    font-size: 14pt;
-    line-height: 85%;
 }
 
 .main-copy p
@@ -102,9 +101,6 @@ a.back:visited
 section
 {
     background-color: #F8F8E5;
-
-    font-family: Gudea;
-    font-size: 12pt;
 
     padding: 20pt 90px 20pt 90px;
     margin: 36pt 0 48pt 0;
