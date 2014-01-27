@@ -103,9 +103,8 @@ section
 {
     background-color: #F8F8E5;
 
-    font-family: BrookeShappell8;
-    font-size: 20pt;
-    color: #074F5F;
+    font-family: Gudea;
+    font-size: 12pt;
 
     padding: 20pt 90px 20pt 90px;
     margin: 36pt 0 48pt 0;
@@ -132,7 +131,6 @@ header
 {
     margin-top: 6pt;
     margin-bottom: 3pt;
-    font-size: 14pt;
 }
 
 @media (max-width: 981px)
