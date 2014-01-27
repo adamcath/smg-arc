@@ -2,25 +2,76 @@
 
 <head>
     <base target="_parent"/>
+    <script src="js/jquery-1.10.2.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Gudea:700' rel='stylesheet' type='text/css'>
     <style>
-        a {
+
+        body
+        {
+            margin-left: 0;
+            padding: 0;
+        }
+
+        a
+        {
             font-family: "Gudea";
             font-weight: 300;
             color: #EB5D26;
-            font-size: 12pt;
+            font-size: 14pt;
             text-decoration: none;
         }
+
+        #linkContainer
+        {
+            text-align: center;
+        }
+
+        #linkContainer.dominant
+        {
+            text-align: left;
+        }
+
+        a
+        {
+            margin: 0px;
+            padding: 1pt 9pt;
+            border: 1px solid #EB5D26;
+            border-radius: 2pt;
+            background-color: rgba(235, 93, 38, 0.1);
+
+        }
+
     </style>
+    <script>
+
+        function getQueryParam(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        var mode = getQueryParam("mode");
+
+        if (mode)
+        {
+
+            $(document).ready(function() {
+                $("#linkContainer").addClass("dominant");
+            });
+        }
+
+    </script>
 </head>
 
-<div style="text-align: center">
+<body>
 
-        <a href="index.html">Home</a>&nbsp;
-        <a href="travel-info.html">Travel Info</a>&nbsp;&nbsp;
-        <a href="story.html">About Us</a>&nbsp;&nbsp;
-        <a href="registry.html">Registry</a>
+    <div id="linkContainer">
+            <a href="index.html">Home</a>
+            <a href="travel-info.html">Travel Info</a>
+            <a href="story.html">About Us</a>
+            <a href="registry.html">Registry</a>
+    </div>
 
-</div>
+</body>
 
 </html>
