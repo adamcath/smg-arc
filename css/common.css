@@ -22,8 +22,6 @@ body
     position: relative;
     padding-left: 90px;
     z-index: 100;
-    position: relative;
-    min-width: 600px; /* to avoid collision with nav */
 }
 
 .title
@@ -37,6 +35,33 @@ body
 
     position: absolute;
     bottom: -22pt;
+}
+
+.back
+{
+    text-align: right;
+    left: 30pt;
+    font-size: 30pt;
+    position: absolute;
+    bottom: -12pt;
+}
+
+a.back
+{
+    text-decoration: none;
+    color: #92CFAB;
+}
+
+a.back:visited
+{
+    color: #92CFAB;
+}
+
+.sun
+{
+    position: absolute;
+    bottom: -15px;
+    right: 90px;
 }
 
 .main-copy
@@ -116,6 +141,16 @@ header
     {
         height: 40px;
         padding: 12pt;
+    }
+
+    .sun
+    {
+        display: none;
+    }
+
+    .back
+    {
+        display: none;
     }
 
     .main-copy
